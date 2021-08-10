@@ -1080,11 +1080,11 @@ Env: {allvars}</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>17</integer>
+				<integer>1</integer>
 				<key>hotmod</key>
-				<integer>1310720</integer>
+				<integer>655360</integer>
 				<key>hotstring</key>
-				<string>T</string>
+				<string>S</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -2841,7 +2841,7 @@ Env: {allvars}</string>
 		<key>bookmark_tag</key>
 		<string>url</string>
 		<key>default_date_format</key>
-		<string>%d.%m.%Y</string>
+		<string>%Y.%m.%d</string>
 		<key>default_template</key>
 		<string>Template.md</string>
 		<key>exact_match</key>
@@ -2852,6 +2852,8 @@ Env: {allvars}</string>
 		<string>{title}</string>
 		<key>path_to_notes</key>
 		<string></string>
+		<key>recursive_search</key>
+		<string>True</string>
 		<key>search_yaml_tags_only</key>
 		<string>True</string>
 		<key>template_tag</key>
@@ -2859,7 +2861,7 @@ Env: {allvars}</string>
 		<key>todo_newest_oldest</key>
 		<string>True</string>
 		<key>url_scheme</key>
-		<string>x-marked://open/?file=</string>
+		<string>obsidian://</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
