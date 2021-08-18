@@ -35,13 +35,6 @@ ACTIONS = [
         "visible": True
     },
     {
-        "title": "Marked 2",
-        "subtitle": "Open Preview in Marked 2",
-        "arg": f"marked|{note_path}",
-        "icon": "icons/marked.png",
-        "visible": True
-    },
-    {
         "title": "Url Scheme",
         "subtitle": "Copy Url Scheme as Markdown Link to Clipboard",
         "arg": f"urlscheme|{note_path}",

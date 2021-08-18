@@ -4,7 +4,7 @@ Markdown Notes is a comprehensive note-taking tool embedded into Alfred with pow
 
 MD Notes works with any markdown editor. 
 
-> [Typora](https://typora.io/) is set up in Alfred Workflow as preferred Markdown editor but it is possible to use another MD Editor or Text Editor if required. To use another Editor it is required to define the Editor in the worklow steps at the end of the WF. 
+> [Obsidian](https://obsidian.md/) is set up in Alfred Workflow as preferred Markdown editor but it is possible to use another MD Editor or Text Editor if required. To use another Editor it is required to define the Editor in the worklow steps at the end of the WF. 
 
 ## Configuration
 
@@ -23,20 +23,14 @@ Variables marked with * are required for running MD Notes properly, the others a
   * `/yourname/Dropbox/Notes` →  works
   * `/Volumes/usb` →  will not work!
 
+* **Path to Inbox** (`path_to_inbox`): Relative path where new files will be placed.
+
 * **Default Date Format** (`default_date_format`): Defines date format when creating new notes or when using placeholders in templates: {date} e.g. %d.%m.%Y %H.%M
 
-* **Default Template** * (`default_template`): The file name that will be used as the default Template. Before templates can be used it is required to create the template.md e.g. `Template.md` (see [Working with Templates](#Working%20with%20Templates))   
-    **Note**: Enter the file name ONLY without path e.g. `myTemplate.md`
+* **Default Template** * (`default_template`): Relative path to the file that will be used as the default Template. (see [Working with Templates](#Working%20with%20Templates))   
 
 * **Extension** * (`ext`): The MD files are text files with a specific extension (usually `.txt`or `.md`) any other extension can be defined if required.   
   **Note:** The files must be type text files.
-  
-* **Search in Tags in YMF only** * (`search_yaml_tags_only`)
-  
-  Tags can be used in the YAML front matter (`Tags: #mytag`) or within the MD note. 
-  
-  1. When set to `True` tag search only search with YMF.
-  2. When set to `False` tags will be searched the whole MD note.  
   
 * **Exact Match** (`exact_match`): Defines if the search should match the exact search term (`True`) or the string (`False`) in markdown notes. 
 
@@ -122,15 +116,15 @@ Type `mdc` followed by **title** and **tags** separated by space will create a N
 
 Type `mdc` and you get a list of all Templates in your folder. After a template was selected the title can be entered as described above.
 
-**Note**: Templates are Notes tagged with `#Template` or whatever you defined as the template tag. 
+**Note**: Templates are Notes tagged with `tmplt` or whatever you defined as the template tag. 
 
 #### YAML Fronter
 
-MD Notes uses YAML Fronter when searching in Tags. Therefore it is required to add YAML Fronter to the top of the notes, with the following format:
+MD Notes uses YAML Fronter when searching in Tags. Therefore, it is required to add YAML Fronter to the top of the notes, with the following format:
 
 ```
 ---
-Tags: #mytag
+tags: [tmplt]
 ---
 ```
 

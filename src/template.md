@@ -1,6 +1,5 @@
 ---
-Created: {date}
-Tags: #Template
+tags: [tmplt]
 ---
 
 # {title}

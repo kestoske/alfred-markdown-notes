@@ -20,8 +20,8 @@ class QuerySplitter(object):
         self.tag_list = list()
         for t in term_list:
             if str(t).startswith('#'):
-                self.tag_list.append(t)
+                self.tag_list.append(t[1:])
             else:
                 title_list.append(t)
         self.title = ' '.join(title_list)
-        self.tags = ' '.join(self.tag_list)
+        self.tags = ', '.join(self.tag_list)

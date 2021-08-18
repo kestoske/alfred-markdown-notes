@@ -61,7 +61,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -85,6 +85,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>18B8D12E-7DF2-4ECD-876B-4E14BE20084F</key>
+		<array/>
 		<key>294CB549-D1EE-4AC0-BF62-B19E2DAD7162</key>
 		<array>
 			<dict>
@@ -141,7 +143,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -181,6 +183,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E821ABDF-E08D-4BAE-83F0-4F24F4AB7B8C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5AB90AFB-D9CE-4B70-AE85-5D54E35911DA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>208D6A70-992F-44C7-A1A6-28E403224D2D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -242,20 +257,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>73F51F35-8DE7-4E97-A18D-ADA7046EB4A7</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>BC3595BC-FFD4-4DBA-BF99-567B48EE838F</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -277,20 +279,8 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</key>
-		<array/>
 		<key>8354F261-D7A0-4848-8312-9EC40100DFA6</key>
 		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>9AFF9D4E-AFFE-4DC2-A1EA-8E795277A5A6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>2F777EDC-8764-4AE9-AFC2-65D224BB01DE</string>
@@ -342,7 +332,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -398,7 +388,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -485,24 +475,25 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>73F51F35-8DE7-4E97-A18D-ADA7046EB4A7</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>03A97A98-84AF-47FA-BD7A-F5BD9090159F</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 		</array>
 		<key>A1994305-42C8-4C6A-BB26-0D822F6B021A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>735B5B72-0876-4143-887E-D8191A48154E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AD21751C-881C-42D6-AC85-F4625B060CE1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8354F261-D7A0-4848-8312-9EC40100DFA6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -528,7 +519,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -632,7 +623,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
+				<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -768,97 +759,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist="https://raw.githubusercontent.com/Acidham/alfred-markdown-notes/master/src/info.plist"
-readonly workflow_url="Acidham/alfred-markdown-notes"
-readonly download_type='github_release'
-readonly frequency_check='4'
-
-# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
-function abort {
-  echo "${1}" &gt;&amp;2
-  exit 1
-}
-
-function url_exists {
-  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
-}
-
-function notification {
-  readonly local notificator="$(find . -type d -name 'Notificator.app')"
-  if [[ -n "${notificator}" ]]; then
-    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
-    return
-  fi
-
-  readonly local terminal_notifier="$(find . -type f -name 'terminal-notifier')"
-  if [[ -n "${terminal_notifier}" ]]; then
-    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
-    return
-  fi
-
-  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
-}
-
-# Local sanity checks
-readonly local_info_plist='info.plist'
-readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
-
-[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
-[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
-[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
-
-# Check for updates
-if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
-  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
-
-  readonly tmp_file="$(mktemp)"
-  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
-  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
-
-  if [[ "${local_version}" == "${remote_version}" ]]; then
-    touch "${local_info_plist}" # Reset timer by touching local file
-    exit 0
-  fi
-
-  if [[ "${download_type}" == 'page' ]]; then
-    notification 'Opening download page…'
-    open "${workflow_url}"
-    exit 0
-  fi
-
-  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
-
-  if url_exists "${download_url}"; then
-    notification 'Downloading and installing…'
-    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
-    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
-  else
-    abort "'workflow_url' (${download_url}) appears to not be reachable."
-  fi
-fi</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9AFF9D4E-AFFE-4DC2-A1EA-8E795277A5A6</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -874,6 +774,37 @@ fi</string>
 			<string>02B9FF6D-1CCA-424C-BEF2-FF6C2F753585</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>1</integer>
+				<key>hotmod</key>
+				<integer>1966080</integer>
+				<key>hotstring</key>
+				<string>S</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>AD21751C-881C-42D6-AC85-F4625B060CE1</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -897,24 +828,6 @@ fi</string>
 			<string>A1994305-42C8-4C6A-BB26-0D822F6B021A</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>Query: '{query}'
-Env: {allvars}</string>
-				<key>cleardebuggertext</key>
-				<true/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>18B8D12E-7DF2-4ECD-876B-4E14BE20084F</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -994,20 +907,6 @@ Env: {allvars}</string>
 						<key>uid</key>
 						<string>6D724BD9-BEF7-4D28-8DCC-A594E968CD3E</string>
 					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:action1}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>marked</string>
-						<key>outputlabel</key>
-						<string>marked</string>
-						<key>uid</key>
-						<string>03A97A98-84AF-47FA-BD7A-F5BD9090159F</string>
-					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
@@ -1080,11 +979,11 @@ Env: {allvars}</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>1</integer>
+				<integer>17</integer>
 				<key>hotmod</key>
 				<integer>655360</integer>
 				<key>hotstring</key>
-				<string>S</string>
+				<string>T</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1317,6 +1216,23 @@ Env: {allvars}</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{var:action2}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2FA91C3B-4CED-410B-B2A6-C4BCBC9D6F41</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1347,25 +1263,8 @@ Env: {allvars}</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{var:action2}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>2FA91C3B-4CED-410B-B2A6-C4BCBC9D6F41</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
-				<true/>
+				<integer>1</integer>
 				<key>filetypes</key>
 				<array>
 					<string>net.daringfireball.markdown</string>
@@ -1588,40 +1487,8 @@ Env: {allvars}</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string>/Applications/Marked 2.app</string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>BC3595BC-FFD4-4DBA-BF99-567B48EE838F</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:action2}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>73F51F35-8DE7-4E97-A18D-ADA7046EB4A7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>net.daringfireball.markdown</string>
@@ -1663,23 +1530,8 @@ Env: {allvars}</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string>/Applications/Typora.app</string>
-				<key>sourcefile</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array/>
 				<key>name</key>
@@ -1691,6 +1543,41 @@ Env: {allvars}</string>
 			<string>C316AE82-592A-4D24-95D1-D889B41122DB</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>/* cSpell:disable */
+ObjC.import('stdlib');
+
+function run(argv) {
+  var query = argv[0];
+  uri = "obsidian://open?path=" + encodeURIComponent(query);
+  
+  app = Application.currentApplication();
+  app.includeStandardAdditions = true;
+  app.openLocation(uri);
+  
+  return query;
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4D9D1E4F-23D3-4158-AADA-36F165103046</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1750,6 +1637,25 @@ Env: {allvars}</string>
 			<string>E821ABDF-E08D-4BAE-83F0-4F24F4AB7B8C</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>Query: '{query}'
+Env: {allvars}
+{alfred_workflow_data}</string>
+				<key>cleardebuggertext</key>
+				<true/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>18B8D12E-7DF2-4ECD-876B-4E14BE20084F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2245,7 +2151,7 @@ Env: {allvars}</string>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<true/>
+				<integer>1</integer>
 				<key>filetypes</key>
 				<array>
 					<string>net.daringfireball.markdown</string>
@@ -2305,6 +2211,46 @@ Env: {allvars}</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>o?</string>
+				<key>subtext</key>
+				<string>Open help and forum pages</string>
+				<key>text</key>
+				<string>Obsidian help</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5AB90AFB-D9CE-4B70-AE85-5D54E35911DA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://help.obsidian.md/Start+here</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>208D6A70-992F-44C7-A1A6-28E403224D2D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2324,7 +2270,7 @@ Env: {allvars}</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>https://acidham.github.io/alfred-markdown-notes/</string>
+	<string>https://github.com/kestoske/alfred-markdown-notes</string>
 	<key>uidata</key>
 	<dict>
 		<key>00C9EAC8-45E3-4C4C-B1CB-D9B5503ADB1F</key>
@@ -2355,9 +2301,9 @@ Env: {allvars}</string>
 		<key>02B9FF6D-1CCA-424C-BEF2-FF6C2F753585</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<integer>415</integer>
 			<key>ypos</key>
-			<integer>75</integer>
+			<integer>20</integer>
 		</dict>
 		<key>02CE4D76-2078-45FE-9A13-8B1D487EEF58</key>
 		<dict>
@@ -2376,9 +2322,9 @@ Env: {allvars}</string>
 		<key>1226368E-7C02-479A-958B-6147F924D9F9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>760</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>405</integer>
+			<integer>445</integer>
 		</dict>
 		<key>18A8C2F0-9E83-42B2-9FFA-04793FDE69AF</key>
 		<dict>
@@ -2390,9 +2336,16 @@ Env: {allvars}</string>
 		<key>18B8D12E-7DF2-4ECD-876B-4E14BE20084F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>805</integer>
+			<integer>85</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>1425</integer>
+		</dict>
+		<key>208D6A70-992F-44C7-A1A6-28E403224D2D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1255</integer>
+			<key>ypos</key>
+			<integer>2495</integer>
 		</dict>
 		<key>294CB549-D1EE-4AC0-BF62-B19E2DAD7162</key>
 		<dict>
@@ -2466,12 +2419,30 @@ Env: {allvars}</string>
 			<key>ypos</key>
 			<integer>1215</integer>
 		</dict>
+		<key>4D9D1E4F-23D3-4158-AADA-36F165103046</key>
+		<dict>
+			<key>note</key>
+			<string>Open note in Obsidian.</string>
+			<key>xpos</key>
+			<integer>1605</integer>
+			<key>ypos</key>
+			<integer>1210</integer>
+		</dict>
 		<key>5739EC91-287F-41C7-8DD5-71C3772036CD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>215</integer>
 			<key>ypos</key>
 			<integer>1390</integer>
+		</dict>
+		<key>5AB90AFB-D9CE-4B70-AE85-5D54E35911DA</key>
+		<dict>
+			<key>note</key>
+			<string>Obsidian help</string>
+			<key>xpos</key>
+			<integer>1080</integer>
+			<key>ypos</key>
+			<integer>2495</integer>
 		</dict>
 		<key>5FA571C6-6183-44C9-B18F-2D4C73A0C48F</key>
 		<dict>
@@ -2516,28 +2487,12 @@ Env: {allvars}</string>
 			<key>ypos</key>
 			<integer>370</integer>
 		</dict>
-		<key>73F51F35-8DE7-4E97-A18D-ADA7046EB4A7</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1295</integer>
-			<key>ypos</key>
-			<integer>955</integer>
-		</dict>
 		<key>7EF41C6D-4E2F-4BED-B733-B3538C647263</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1295</integer>
 			<key>ypos</key>
 			<integer>145</integer>
-		</dict>
-		<key>8129C3CE-D221-4AF0-818F-098A0CC7D2CE</key>
-		<dict>
-			<key>note</key>
-			<string>Open in Typora</string>
-			<key>xpos</key>
-			<integer>1575</integer>
-			<key>ypos</key>
-			<integer>1175</integer>
 		</dict>
 		<key>8354F261-D7A0-4848-8312-9EC40100DFA6</key>
 		<dict>
@@ -2612,17 +2567,6 @@ Env: {allvars}</string>
 			<key>ypos</key>
 			<integer>790</integer>
 		</dict>
-		<key>9AFF9D4E-AFFE-4DC2-A1EA-8E795277A5A6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>12</integer>
-			<key>note</key>
-			<string>OneUpdater</string>
-			<key>xpos</key>
-			<integer>625</integer>
-			<key>ypos</key>
-			<integer>75</integer>
-		</dict>
 		<key>9CFA7349-15E0-4F12-8E6D-251360FC1EAC</key>
 		<dict>
 			<key>xpos</key>
@@ -2648,6 +2592,13 @@ Env: {allvars}</string>
 			<key>ypos</key>
 			<integer>240</integer>
 		</dict>
+		<key>AD21751C-881C-42D6-AC85-F4625B060CE1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
 		<key>AE883F79-FCA1-448E-AF9A-D8FF94C93552</key>
 		<dict>
 			<key>colorindex</key>
@@ -2667,15 +2618,6 @@ Env: {allvars}</string>
 			<integer>795</integer>
 			<key>ypos</key>
 			<integer>2490</integer>
-		</dict>
-		<key>BC3595BC-FFD4-4DBA-BF99-567B48EE838F</key>
-		<dict>
-			<key>note</key>
-			<string>Open in Mardown Viewer</string>
-			<key>xpos</key>
-			<integer>1575</integer>
-			<key>ypos</key>
-			<integer>925</integer>
 		</dict>
 		<key>BC9416FD-DA8C-4E89-BB77-2300E23FC2AB</key>
 		<dict>
@@ -2843,33 +2785,31 @@ Env: {allvars}</string>
 		<key>default_date_format</key>
 		<string>%Y.%m.%d</string>
 		<key>default_template</key>
-		<string>Template.md</string>
+		<string>Resources/Templates/Default template.md</string>
 		<key>exact_match</key>
 		<string>True</string>
 		<key>ext</key>
 		<string>.md</string>
 		<key>filename_format</key>
 		<string>{title}</string>
+		<key>path_to_inbox</key>
+		<string>Inbox</string>
 		<key>path_to_notes</key>
-		<string></string>
-		<key>recursive_search</key>
-		<string>True</string>
-		<key>search_yaml_tags_only</key>
-		<string>True</string>
+		<string>/Users/kestutis/Library/Mobile Documents/iCloud~md~obsidian/Documents/Knowledge</string>
 		<key>template_tag</key>
-		<string>#Template</string>
+		<string>tmplt</string>
 		<key>todo_newest_oldest</key>
 		<string>True</string>
 		<key>url_scheme</key>
-		<string>obsidian://</string>
+		<string>obsidian://open?path=</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>path_to_notes</string>
 	</array>
 	<key>version</key>
-	<string>3.1.2</string>
+	<string>3.2.0</string>
 	<key>webaddress</key>
-	<string>https://github.com/Acidham/alfred-markdown-notes</string>
+	<string>https://github.com/kestoske/alfred-markdown-notes</string>
 </dict>
 </plist>

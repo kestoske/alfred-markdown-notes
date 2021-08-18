@@ -39,28 +39,16 @@ class Notes(object):
         '#': '-'
     }
 
-    # Fallback Content when no Template is available
-    FALLBACK_CONTENT = "---\n" \
-        "Created: {date}\n" \
-        "Tags: \n" \
-        "---\n" \
-        "# {title}\n" \
-        "```\n" \
-        "This is the fallback Template.\n" \
-        "Create your own template, see help!\n" \
-        "```"
-
     def __init__(self):
         if not(self.isPython3()):
             Tools.log("PYTHON VERSION:", sys.version)
             raise ModuleNotFoundError("Python version 3.7.0 or higher required!")
         self.extension = self.__buildNotesExtension()
         self.path = self.__buildNotesPath()
-        self.recursive_search = Tools.getEnvBool('recursive_search')
-        self.default_template = os.getenv('default_template')
+        self.default_template = os.path.join(self.path, os.getenv('default_template'))
+        self.path_to_inbox = os.path.join(self.path, os.getenv('path_to_inbox'))
         self.template_tag = os.getenv('template_tag')
         self.url_scheme = os.getenv('url_scheme')
-        self.search_yaml_tags_only = Tools.getEnvBool('search_yaml_tags_only')
         self.default_date_format = os.getenv('default_date_format')
         self.exact_match = Tools.getEnvBool('exact_match')
         self.todo_newest_oldest = Tools.getEnvBool('todo_newest_oldest')
@@ -155,6 +143,12 @@ class Notes(object):
         """
         return self.path
 
+    def getDefaultTemplate(self) -> str:
+        return self.default_template
+
+    def getTemplateTag(self) -> str:
+        return self.template_tag
+
     def getNotesExtension(self) -> str:
         """
         Get notes extension from .env
@@ -230,36 +224,35 @@ class Search(Notes):
             bool: True if search terms matches
 
         """
-        content = content.lower()
-        content = self.strReplace(content, self.REPL_MAP)
-        word_list = content.split(' ')
-        word_list = [self._chop(w, '#') for w in word_list]
+        stripped_content = self.strReplace(content.lower(), self.REPL_MAP)
         search_terms = [s.lower() for s in search_terms]
-        match = False
         matches = list()
 
-        for st in search_terms:
-            search_str = st.replace('*', str())
-            # search if search term contains a whitespace
-            if ' ' in st:
-                regexp = re.compile(f'({st})', re.I)
-                match = True if len(re.findall(regexp, content)) > 0 else False
-            # search if wildcard search in the end
-            elif st.endswith('*'):
-                match_list = [x for x in word_list if x.startswith(search_str)]
-                match = True if len(match_list) > 0 else False
-            # search if wildcard search in front
-            elif st.startswith('*'):
-                match_list = [x for x in word_list if x.endswith(search_str)]
-                match = True if len(match_list) > 0 else False
-            # search if exact match is true
-            elif self.exact_match:
-                match = True if search_str in word_list else False
-            # search with exact match is false
+        for search_term in search_terms:
+            if search_term.startswith('#'):
+                match = self._match_list_of_words(search_term[1:], self.getTagsFromContent(content))
+            elif ' ' in search_term:
+                regexp = re.compile(f'({search_term})', re.I)
+                match = True if len(re.findall(regexp, stripped_content)) > 0 else False
             else:
-                match = True if search_str in str(word_list) else False
+                word_list = stripped_content.split(' ')
+                word_list = [self._chop(w, '#') for w in word_list]
+                match = self._match_list_of_words(search_term, word_list)
             matches.append(match)
-        match = all(matches) if operator == 'AND' else any(matches)
+        return all(matches) if operator == 'AND' else any(matches)
+
+    def _match_list_of_words(self, st: str, word_list: list) -> bool:
+        search_str = st.replace('*', str())
+        if st.endswith('*'):
+            match_list = [x for x in word_list if x.startswith(search_str)]
+            match = True if len(match_list) > 0 else False
+        elif st.startswith('*'):
+            match_list = [x for x in word_list if x.endswith(search_str)]
+            match = True if len(match_list) > 0 else False
+        elif self.exact_match:
+            match = True if search_str in word_list else False
+        else:
+            match = True if search_str in str(word_list) else False
         return match
 
     def notes_search(self, search_terms: list, search_type: str) -> list:
@@ -282,8 +275,9 @@ class Search(Notes):
         if file_list is not None:
             for f in file_list:
                 content = self._getFileContent(f['path'])
-                if content != str() and (search_type == 'and' and self._match(search_terms, content, 'AND')) or (
-                        search_type == 'or' and self._match(search_terms, content, 'OR')):
+                if content != str() \
+                        and (search_type == 'and' and self._match(search_terms, content, 'AND')) \
+                        or (search_type == 'or' and self._match(search_terms, content, 'OR')):
                     new_list.append(f)
         return new_list
 
@@ -381,12 +375,9 @@ class Search(Notes):
         err = 0
         file_list = list()
         try:
-            if self.recursive_search:
-                for root, _, files in os.walk(self.path):
-                    for file in files:
-                        file_list.append(os.path.join(root, file))
-            else:
-                file_list = os.listdir(self.path)
+            for root, _, files in os.walk(self.path):
+                for file in files:
+                    file_list.append(os.path.join(root, file))
         except OSError as e:
             err = e.errno
             pass
@@ -395,7 +386,7 @@ class Search(Notes):
             for f in file_list:
                 f_path = os.path.join(self.path, f)
                 not (f.startswith('.')) and f.endswith(self.extension) and seq.append({
-                    'filename': f,
+                    'filename': f.split('/')[-1],
                     'path': f_path,
                     'title': self.getNoteTitle(f_path),
                     'ctime': self.getFileMeta(f_path, 'ctime'),
@@ -405,7 +396,7 @@ class Search(Notes):
             sorted_file_list = sorted(seq, key=lambda k: k['mtime'], reverse=reverse)
             return sorted_file_list
 
-    def tagSearch(self, tag, sort_by: str = 'tag', reverse: bool = False) -> list:
+    def tagSearch(self, tag, sort_by: str = 'tag', reverse: bool = False) -> dict:
         """
         Search for notes with tag
 
@@ -423,26 +414,27 @@ class Search(Notes):
         i = {'tag': 0, 'count': 1}
         matches = list()
         sorted_file_list = self.getFilesListSorted()
-        regex = re.compile(
-            r'#{1}(\w+)\s?', re.I) if tag == '' else re.compile(r'#{1}(' + tag + r'\w*)\s?', re.I | re.UNICODE)
         for f in sorted_file_list:
-            content = self._getFileContent(f['path'])
-            if content != str():
-                if self.search_yaml_tags_only:
-                    match_obj = re.search(r'\bTags:.*', content, re.IGNORECASE | re.UNICODE)
-                    if match_obj:
-                        r = match_obj.group(0)
-                        results = re.findall(regex, r)
-                        matches.extend(results)
-                else:
-                    results = re.findall(regex, content)
-                    matches.extend(results)
+            results = self.getFileTags(f['path'])
+            matches.extend(results)
 
         counted_matches = Counter([v.lower() for v in matches])
         # Sorted by match counter x[1] if sort by key (tag name) is required change to x[0]
-        sorted_matches = OrderedDict(
-            sorted(counted_matches.items(), key=lambda x: x[i[sort_by]], reverse=reverse))
-        return sorted_matches
+        return OrderedDict(
+            sorted(counted_matches.items(), key=lambda x: x[i[sort_by]], reverse=reverse)
+        )
+
+    def getFileTags(self, path: str) -> list:
+        return self.getTagsFromContent(self._getFileContent(path))
+
+    def getTagsFromContent(self, content: str) -> list:
+        match_obj = re.search(r'\btags:\s\[(.*?)\]', content, re.UNICODE)
+        if match_obj is None:
+            return []
+        tags = match_obj.group(1)
+        if tags.strip() == str():
+            return []
+        return [tag.strip() for tag in tags.split(',')]
 
     def todoSearch(self, todo: str) -> list:
         """
@@ -511,8 +503,8 @@ class Search(Notes):
         match = False
         with open(file_path, 'r') as c:
             lines = c.readlines()[0:5]
-        for l in lines:
-            match_obj = re.search(r'Tags:.*' + tag, l, re.IGNORECASE)
+        for line in lines:
+            match_obj = re.search(r'tags: \[.*' + tag, line)
             if match_obj:
                 match = True
                 break
@@ -602,7 +594,7 @@ class NewNote(Notes):
             str: markdown file path
         """
         def applyFilenameFormat(title: str):
-            """Appliies configured Fileformat to filename"""
+            """Applies configured Fileformat to filename"""
             frmt = self.filename_format
             res = re.findall(r"\{[\.\-:%a-zA-Z]*\}", frmt)
             for r in res:
@@ -614,12 +606,11 @@ class NewNote(Notes):
                     frmt = frmt.replace(r, title)
             return frmt
 
-        file_name = file_name.rstrip().lstrip()
-        file_name = applyFilenameFormat(file_name)
-        file_path = os.path.join(self.path, f"{file_name}{self.extension}")
+        formatted_file_name = applyFilenameFormat(file_name.strip())
+        file_path = os.path.join(self.path_to_inbox, f"{formatted_file_name}{self.extension}")
         if os.path.isfile(file_path):
-            new_file_name = Tools.strJoin(file_name, ' ', self.getTodayDate('%d-%m-%Y %H-%M-%S'))
-            file_path = os.path.join(self.path, f"{new_file_name}{self.extension}")
+            new_file_name = Tools.strJoin(formatted_file_name, ' ', self.getTodayDate('%Y-%m-%d %H-%M-%S'))
+            file_path = os.path.join(self.path_to_inbox, f"{new_file_name}{self.extension}")
         return file_path
 
     def getDefaultTemplate(self) -> str:
@@ -657,19 +648,17 @@ class NewNote(Notes):
 
             str: Content
         """
-        if '#' not in self.template_tag or self.template_tag == str():
-            self.template_tag = '#Template'
         if os.path.exists(self.template_path):
             with open(self.template_path, "r") as f:
                 content = f.read()
         else:
-            content = self.FALLBACK_CONTENT
-        content = content.replace(self.template_tag, '')
+            content = self.getDefaultTemplate()
         for k, v in kwargs.items():
             content = content.replace('{' + k + '}', v)
-        tag_line = f'Tags: {self.tags}'
         if self.tags:
-            content = content.replace('Tags: ', tag_line)
+            content = content.replace(self.template_tag, self.tags)
+        else:
+            content = re.sub(r'(,\s)?' + re.escape(self.template_tag) + r'(,\s)?', '', content)
         return content
 
     def __normalize_filename(self, f: str) -> str:
